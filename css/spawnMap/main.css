@@ -9,16 +9,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Gotham Pro';
-    src: url('../../fonts/gothampro/GothamPro-Mediumitalic.eot');
-    src: local('Gotham Pro Medium Italic'), local('GothamPro-Mediumitalic'),
-        url('../../fonts/gothampro/GothamPro-Mediumitalic.eot?#iefix') format('embedded-opentype'),
-        url('../../fonts/gothampro/GothamPro-Mediumitalic.woff') format('woff'),
-        url('../../fonts/gothampro/GothamPro-Mediumitalic.ttf') format('truetype');
-    font-weight: 500;
-    font-style: italic;
-}
 * {
   box-sizing: border-box;
 }
@@ -65,4 +55,24 @@ html, body {
     border: #e2852e 2px solid;
     color: #fdd865;
     box-shadow: 0px 0px 22px rgba(234, 158, 62, 0.2);
+}
+
+.footer-info {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #0c0c0c;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.copyright {
+    color: #888;
+    font-size: 14px;
 }
