@@ -1,12 +1,23 @@
 @font-face {
-	font-family: 'Gotham Pro';
-	src: url('../fonts/gothampro/GothamPro-Medium.eot');
-	src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
-		url('../fonts/gothampro/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/gothampro/GothamPro-Medium.woff') format('woff'),
-		url('../fonts/gothampro/GothamPro-Medium.ttf') format('truetype');
-	font-weight: 500;
-	font-style: normal;
+    font-family: 'Gotham Pro';
+    src: url('../../fonts/gothampro/GothamPro-Medium.eot');
+    src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+        url('../../fonts/gothampro/GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/gothampro/GothamPro-Medium.woff') format('woff'),
+        url('../../fonts/gothampro/GothamPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('../../fonts/gothampro/GothamPro-Mediumitalic.eot');
+    src: local('Gotham Pro Medium Italic'), local('GothamPro-Mediumitalic'),
+        url('../../fonts/gothampro/GothamPro-Mediumitalic.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/gothampro/GothamPro-Mediumitalic.woff') format('woff'),
+        url('../../fonts/gothampro/GothamPro-Mediumitalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
 }
 * {
   box-sizing: border-box;
@@ -23,21 +34,35 @@ html, body {
     padding: 10px;
     width: 100%;
     height: 70px;
-    background-image: linear-gradient(to bottom right, #111111, #222222);
+    background-image: linear-gradient(to bottom right, #222222, #111111);
     border-bottom: #333333 3px solid;
 }
-.spawnButton {
-
+.astmix-logo {
+    height: 50px;
+    overflow: hidden;
+    border-radius: 7px;
+    margin-right: 40px;
+}
+.mainButton {
+    font-family: "Gotham Pro", sans-serif;
+    font-size: 500;
+    color: #888888;
     margin: auto;
-    margin-left: 40px;
+    margin-left: 30px;
+    margin-right: 0;
     height: 30px;
-    width: 70px;
+    width: 120px;
     background: #333333;
     border-radius: 5px;
     border: #333333 2px solid;
     transition-duration: 0.4s;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
-.spawnButton:hover {
-    border: #EFA94A 2px solid;
-    text-color; #EFA94A;
+.mainButton:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+    border: #e2852e 2px solid;
+    color: #fdd865;
+    box-shadow: 0px 0px 22px rgba(234, 158, 62, 0.2);
 }
