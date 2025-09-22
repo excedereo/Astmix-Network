@@ -82,8 +82,8 @@ function setupTooltip(element) {
 }
 
 function updateTooltipPosition(tooltip, event) {
-    tooltip.style.left = (event.pageX + 15) + 'px';
-    tooltip.style.top = (event.pageY + 15) + 'px';
+    tooltip.style.left = (event.clientX + 15) + 'px';
+    tooltip.style.top = (event.clientY + 15) + 'px';
 }
 
 
