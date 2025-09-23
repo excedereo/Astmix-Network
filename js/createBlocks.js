@@ -1,6 +1,8 @@
 // createBlocks.js
 const zoomMultiplier = 5;
 
+
+
 function createBlocks() {
     if (!window.blocksData || !window.mapCenter) {
         console.error('Данные не загружены!');
@@ -85,10 +87,30 @@ function createBlocks() {
         blockElement.style.height = height + 'px';
         blockElement.style.position = 'absolute';
         blockElement.innerHTML = block.id;
-        console.log("rent:"+block.isRented)
-        if (block.isRented == true){
-        blockElement.style.backgroundImage = 'linear-gradient(to bottom right, #26272b, #27282c)';
-        blockElement.style.border = '#1b1c1f 2px solid';}
+
+        const dateString = block.arendTill
+        const [day, month, year] = dateString.split('.').map(Number);
+        const targetDate = new Date(year, month - 1, day);
+        const today = new Date();
+        const diffTime = targetDate - today;
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        isRented = false;
+        if (block.rentedBy != "") {
+            isRented = true;
+            console.log(block.id,"s")
+        }
+
+        if (isRented){
+            if (diffDays < 0) {
+                blockElement.className = "territory territory-Expired"
+                blockElement.setAttribute('data-expired', true)
+            } else if (diffDays < 7) {
+                blockElement.className = "territory territory-Deadline"
+            }
+        } else {
+            blockElement.className = "territory territory-Empty"
+        }
 
         blockElement.setAttribute('data-id', block.id);
         blockElement.setAttribute('data-name', block.name);
@@ -97,10 +119,10 @@ function createBlocks() {
         blockElement.setAttribute('data-x2', block.x2);
         blockElement.setAttribute('data-y2', block.y2);
         blockElement.setAttribute('data-price', block.price);
-        blockElement.setAttribute('data-arendedby', block.arendedBy || '');
-        blockElement.setAttribute('data-arendtill', block.arendTill || '');
-        blockElement.setAttribute('data-arendatorname', block.arendatorName || '');
-        blockElement.setAttribute('data-isRented', block.isRented );
+        blockElement.setAttribute('data-rentedBy', block.rentedBy || '');
+        blockElement.setAttribute('data-arendTill', block.arendTill || '');
+        blockElement.setAttribute('data-arendatorName', block.arendatorName || '');
+        blockElement.setAttribute('data-isRented', isRented );
 
 
 

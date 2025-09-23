@@ -7,20 +7,49 @@
 .territory {
     transition: 0.3s ease;
     position: absolute;
-    width: 1000px;
-    height: 1000px;
-    background-image: linear-gradient(to bottom right, #6fbe73, #497e4c);
-    border: #3e6a40  2px solid;
     border-radius: 8px;
+    background-image: linear-gradient(to bottom right, #26272b, #27282c);
+    border: #1b1c1f 2px solid;
 }
 .territory:hover {
     transform: scale(1.1);
 }
 
+.territory-Empty {
+    background-image: linear-gradient(to bottom right, #6fbe73, #497e4c);
+    border: #3e6a40 2px solid;
+}
+
+.territory-Deadline {
+    transition: 0.3s ease;
+    animation: territoryDeadline 3s infinite;
+    background: #26272b;
+}
+
+@keyframes territoryDeadline {
+    0% { background-color: #2b2020; }
+    50% { background-color: #27282c; }
+    100% { background-color: #2b2020; }
+}
+
+.territory-Expired {
+    transition: 0.3s ease;
+    animation: territoryExpired 2s infinite;
+    background: #aa0021;
+    border: #9a0523 2px solid;
+}
+
+@keyframes territoryExpired {
+    0% { background-color: #fe0032; }
+    50% { background-color: #67081b; }
+    100% { background-color: #fe0032; }
+}
+
+
+
 .road-container {
     transition: 0.3s ease;
 }
-
 .road {
     transition: 0.3s ease;
     z-index: 2;
@@ -34,7 +63,6 @@
     justify-content: center;
     color: white;
 }
-
 .roadBackground {
     transition: 0.3s ease;
     z-index: 1;
@@ -42,16 +70,26 @@
     background: #26282e;
     border-radius: 3px;
 }
-
 .road-container:hover {
     transform: scale(1.1);
     z-index: 10;
 }
-
 .road-container:hover .roadBackground {
     background: var(--hover-color) !important;
 }
-
 .road-container:hover .road {
     filter: brightness(0.9);
+}
+
+.mapTooltip {
+    display: none;
+    position: fixed;
+    background: rgba(0,0,0,0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    pointer-events: none;
+    min-width: 300px;
+    max-width: 500px;
+    z-index: 2000;
 }

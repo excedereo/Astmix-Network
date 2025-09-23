@@ -13,17 +13,8 @@ function initTooltips() {
 
 function setupTooltip(element) {
     const tooltip = document.createElement('div');
-    tooltip.className = 'custom-tooltip';
-    tooltip.style.display = 'none';
-    tooltip.style.position = 'fixed';
-    tooltip.style.background = 'rgba(0,0,0,0.9)';
-    tooltip.style.color = 'white';
-    tooltip.style.padding = '10px';
-    tooltip.style.borderRadius = '6px';
-    tooltip.style.zIndex = '1000';
-    tooltip.style.pointerEvents = 'none';
-    tooltip.style.width = '300px';
-    tooltip.style.maxWidth = '500px';
+    tooltip.className = 'mapTooltip';
+
 
     // Получение данных
     const id = element.getAttribute('data-id');
@@ -33,16 +24,22 @@ function setupTooltip(element) {
     const x2 = element.getAttribute('data-x2');
     const y2 = element.getAttribute('data-y2');
     const price = element.getAttribute('data-price');
-    const arendedBy = element.getAttribute('data-arendedby');
+    const rentedBy = element.getAttribute('data-rentedBy');
     const arendTill = element.getAttribute('data-arendtill');
-    const arendatorName = element.getAttribute('data-arendatorname');
+    const arendatorName = element.getAttribute('data-arendatorName');
     const isRented = element.getAttribute('data-isRented');
     const roadColor = element.getAttribute('data-roadColor');
+
+    rentStatus = "Арендован";
+    if (element.getAttribute('data-expired') == "true") {
+        rentStatus = "Просрочен";
+
+    }
 
     if (isRented == "true") {
         tooltip.innerHTML = `
         <div><strong>${name}</strong> <span style="color: #333333;">(Сектор: ${id})</span></div>
-        <div style="color: #fd1c49;">Арендован</div>
+        <div style="color: #fd1c49;">${rentStatus}</div>
         <div>Владелец: ${arendatorName || 'Не указан'}</div>
         <div>До: ${arendTill || 'Не указано'}</div>
         <br>

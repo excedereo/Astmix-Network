@@ -6,7 +6,6 @@ window.blocksData = [
         x2: 97, y2: 28,
         price: 15,
         name: "A1",
-        isRented: false,
         rentedBy: "", arendTill: "", arendatorName: ""
     },
         {
@@ -14,27 +13,25 @@ window.blocksData = [
         x1: 99, y1: 10,
         x2: 115, y2: 28,
         price: 15,
-        name: "TaoBao",
-        isRented: true,
-        rentedBy: "gameplau228", arendTill: "19.12", arendatorName: ""
+        name: "Клуб фанатов Murlitz",
+        rentedBy: "Arleighton", arendTill: "30.10.2025", arendatorName: "PositiveOnlyMan4ik"
     },
         {
         id: "A3",
         x1: 117, y1: 10,
         x2: 132, y2: 28,
         price: 15,
-        name: "A3",
-        isRented: false,
-        rentedBy: "", arendTill: "", arendatorName: ""
+        name: "Espada",
+        rentedBy: "zquwu", arendTill: "27.09.2025", arendatorName: "Stralitz"
+
     },
         {
         id: "A4",
         x1: 134, y1: 10,
         x2: 150, y2: 28,
         price: 15,
-        name: "Espada",
-        isRented: true,
-        rentedBy: "zquwu", arendTill: "27.09", arendatorName: "Stralitz"
+        name: "TaoBao",
+        rentedBy: "gameplau228", arendTill: "20.09.2025", arendatorName: ""
     }
 ];
 
@@ -48,7 +45,7 @@ window.roadData = [
     },
         {
         id: 1,
-        name: "Улица Осеняя",
+        name: "Улица Октябрьская",
         x1: 75, y1: 4,
         x2: 79, y2: 98,
         hoverColor: "#1ed760"
