@@ -88,6 +88,7 @@ function createBlocks() {
         blockElement.style.position = 'absolute';
         blockElement.innerHTML = block.id;
 
+
         const dateString = block.arendTill
         const [day, month, year] = dateString.split('.').map(Number);
         const targetDate = new Date(year, month - 1, day);
@@ -98,10 +99,12 @@ function createBlocks() {
         isRented = false;
         if (block.rentedBy != "") {
             isRented = true;
-            console.log(block.id,"s")
         }
 
-        if (isRented){
+        if (block.rentedBy == "public") {
+            blockElement.className = "territory territory-public"
+            blockElement.setAttribute('data-public', true );
+        } else if (isRented){
             if (diffDays < 0) {
                 blockElement.className = "territory territory-Expired"
                 blockElement.setAttribute('data-expired', true)

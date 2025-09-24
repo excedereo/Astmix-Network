@@ -36,7 +36,14 @@ function setupTooltip(element) {
 
     }
 
-    if (isRented == "true") {
+    if (element.getAttribute('data-public') == "true") {
+        tooltip.innerHTML = `
+        <div><strong>${name}</strong> <span style="color: #333333;">(Сектор: ${id})</span></div>
+        <div style="color: #548af7;">Публичный</div>
+        <br>
+        <div style="font-size: 10px; color: #888888;">Координаты: ${x1}, ${y1} - ${x2}, ${y2}</div>
+    `;
+    } else if (isRented == "true") {
         tooltip.innerHTML = `
         <div><strong>${name}</strong> <span style="color: #333333;">(Сектор: ${id})</span></div>
         <div style="color: #fd1c49;">${rentStatus}</div>

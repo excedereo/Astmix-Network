@@ -32,6 +32,14 @@ window.blocksData = [
         price: 15,
         name: "TaoBao",
         rentedBy: "gameplau228", arendTill: "20.09.2025", arendatorName: ""
+    },
+        {
+        id: "A5",
+        x1: 152, y1: 10,
+        x2: 168, y2: 28,
+        price: 15,
+        name: "Банк",
+        rentedBy: "public", arendTill: "", arendatorName: ""
     }
 ];
 

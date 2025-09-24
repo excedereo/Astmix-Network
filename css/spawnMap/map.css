@@ -27,9 +27,9 @@
 }
 
 @keyframes territoryDeadline {
-    0% { background-color: #2b2020; }
-    50% { background-color: #27282c; }
-    100% { background-color: #2b2020; }
+    0% { background-color: #26272b; }
+    50% { background-color: #EFA94A; }
+    100% { background-color: #26272b; }
 }
 
 .territory-Expired {
@@ -43,6 +43,12 @@
     0% { background-color: #fe0032; }
     50% { background-color: #67081b; }
     100% { background-color: #fe0032; }
+}
+
+.territory-public {
+    transition: 0.3s ease;
+    background: #76a0f7;
+    border: #4d7fe4 2px solid;
 }
 
 
