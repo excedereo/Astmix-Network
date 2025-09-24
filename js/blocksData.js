@@ -5,7 +5,7 @@ window.blocksData = [
         x1: 81, y1: 10,
         x2: 97, y2: 28,
         price: 15,
-        name: "A1",
+        name: "A1", description: "",
         rentedBy: "", arendTill: "", arendatorName: ""
     },
         {
@@ -13,7 +13,7 @@ window.blocksData = [
         x1: 99, y1: 10,
         x2: 115, y2: 28,
         price: 15,
-        name: "Клуб фанатов Murlitz",
+        name: "Клуб фанатов Murlitz", description: "",
         rentedBy: "Arleighton", arendTill: "30.10.2025", arendatorName: "PositiveOnlyMan4ik"
     },
         {
@@ -21,16 +21,15 @@ window.blocksData = [
         x1: 117, y1: 10,
         x2: 132, y2: 28,
         price: 15,
-        name: "Espada",
+        name: "Espada", description: "",
         rentedBy: "zquwu", arendTill: "27.09.2025", arendatorName: "Stralitz"
-
     },
         {
         id: "A4",
         x1: 134, y1: 10,
         x2: 150, y2: 28,
         price: 15,
-        name: "TaoBao",
+        name: "TaoBao", description: "",
         rentedBy: "gameplau228", arendTill: "20.09.2025", arendatorName: ""
     },
         {
@@ -38,7 +37,7 @@ window.blocksData = [
         x1: 152, y1: 10,
         x2: 168, y2: 28,
         price: 15,
-        name: "Банк",
+        name: "Банк", description: "Кредитно-финансовое учреждение, сосредоточивающее денежные средства и накопления, предоставляющее кредиты, осуществляющее денежные расчёты между предприятиями или частными лицами, выпуск денег в обращение, операции с ценными бумагами.",
         rentedBy: "public", arendTill: "", arendatorName: ""
     }
 ];

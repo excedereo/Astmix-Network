@@ -1,8 +1,6 @@
 // createBlocks.js
 const zoomMultiplier = 5;
 
-
-
 function createBlocks() {
     if (!window.blocksData || !window.mapCenter) {
         console.error('Данные не загружены!');
@@ -16,9 +14,13 @@ function createBlocks() {
         return;
     }
 
-    const pageWidth = 1200;
-    const pageHeight = 800;
-    const centerX = pageWidth / 2;
+    // Устанавливаем размер большой карты 6000x6000
+    spawnMap.style.width = '6000px';
+    spawnMap.style.height = '6000px';
+
+    const pageWidth = 6000; // Теперь 6000px
+    const pageHeight = 6000;
+    const centerX = pageWidth / 2; // Центр большой карты (3000, 3000)
     const centerY = pageHeight / 2;
 
     // 1. ВСЕ дороги с общими контейнерами
@@ -126,6 +128,10 @@ function createBlocks() {
         blockElement.setAttribute('data-arendTill', block.arendTill || '');
         blockElement.setAttribute('data-arendatorName', block.arendatorName || '');
         blockElement.setAttribute('data-isRented', isRented );
+        if (block.description != "") {
+            blockElement.setAttribute('data-description', block.description)
+        }
+
 
 
 
@@ -134,14 +140,18 @@ function createBlocks() {
 
     // Центральная точка
     const centerDot = document.createElement('div');
+    centerDot.id = 'mapCenterDot';
     centerDot.style.position = 'absolute';
-    centerDot.style.left = (centerX) + 'px';
-    centerDot.style.top = (centerY) + 'px';
+    centerDot.style.left = centerX + 'px'; // Центр большой карты
+    centerDot.style.top = centerY + 'px';
     centerDot.style.width = '10px';
     centerDot.style.height = '10px';
     centerDot.style.background = 'red';
     centerDot.style.borderRadius = '50%';
+    centerDot.style.zIndex = '1000';
     spawnMap.appendChild(centerDot);
+
+    console.log('Красная точка создана в центре большой карты:', centerX, centerY);
 }
 
 window.addEventListener('load', function() {
