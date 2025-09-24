@@ -14,13 +14,12 @@ function createBlocks() {
         return;
     }
 
-    // Устанавливаем размер большой карты 6000x6000
     spawnMap.style.width = '6000px';
     spawnMap.style.height = '6000px';
 
-    const pageWidth = 6000; // Теперь 6000px
+    const pageWidth = 6000;
     const pageHeight = 6000;
-    const centerX = pageWidth / 2; // Центр большой карты (3000, 3000)
+    const centerX = pageWidth / 2;
     const centerY = pageHeight / 2;
 
     // 1. ВСЕ дороги с общими контейнерами
@@ -138,21 +137,58 @@ function createBlocks() {
         spawnMap.appendChild(blockElement);
     });
 
+function spawnDotInitializer() {
     // Центральная точка
     const centerDot = document.createElement('div');
     centerDot.id = 'mapCenterDot';
     centerDot.style.position = 'absolute';
-    centerDot.style.left = centerX + 'px'; // Центр большой карты
+    centerDot.style.left = centerX + 'px';
     centerDot.style.top = centerY + 'px';
-    centerDot.style.width = '10px';
-    centerDot.style.height = '10px';
-    centerDot.style.background = 'red';
-    centerDot.style.borderRadius = '50%';
+    centerDot.style.width = '1px';
+    centerDot.style.height = '1px';
     centerDot.style.zIndex = '1000';
+    centerDot.style.display = 'flex';
+    centerDot.style.justifyContent = 'center';
+    centerDot.style.alignItems = 'center';
+
+    const centerTooltip = document.createElement('div');
+    centerTooltip.className = 'mapTooltip';
+    centerTooltip.innerHTML = `
+        <div style="color: #983de0;"><strong>Центр Спавна</strong></div>
+        <div style="color: #444247;">Портал в незер-хаб</div>
+        <br>
+        <div style="font-size: 10px; color: #888888;">Координаты: ${window.mapCenter.x}, ${window.mapCenter.y}</div>
+    `;
+    centerTooltip.style.display = 'none';
+    document.body.appendChild(centerTooltip);
+
+    centerDot.innerHTML = `<img src="img/Nether_Portal.webp" style="height: 30px; border-radius: 5px; cursor: pointer; transition: transform 0.3s ease;">`;
+
+    const portalImg = centerDot.querySelector('img');
+
+    portalImg.addEventListener('mouseenter', (e) => {
+        portalImg.style.transform = 'scale(1.1)';
+        centerTooltip.style.display = 'block';
+        centerTooltip.style.left = (e.clientX + 15) + 'px';
+        centerTooltip.style.top = (e.clientY + 15) + 'px';
+    });
+
+    portalImg.addEventListener('mousemove', (e) => {
+        centerTooltip.style.left = (e.clientX + 15) + 'px';
+        centerTooltip.style.top = (e.clientY + 15) + 'px';
+    });
+
+    portalImg.addEventListener('mouseleave', () => {
+        portalImg.style.transform = 'scale(1)';
+        centerTooltip.style.display = 'none';
+    });
+
     spawnMap.appendChild(centerDot);
 
-    console.log('Красная точка создана в центре большой карты:', centerX, centerY);
+    }
+spawnDotInitializer();
 }
+
 
 window.addEventListener('load', function() {
     setTimeout(createBlocks, 100);

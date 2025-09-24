@@ -6,10 +6,9 @@
     <link rel="shortcut icon" href="favicon.ico">
     <title>Astmix Network</title>
     <link rel="stylesheet" href="css/spawnMap/main.css">
-    <link rel="stylesheet" href="css/spawnMap/map.css">
+    <link rel="stylesheet" href="css/spawnMap/interactiveMap/map.css">
 </head>
 <body>
-    <!-- Хедер поверх всего -->
     <div class="head">
         <img src="img/astmixAvatar.png" class="astmix-logo">
         <button class="mainButton" id="spawnMap">Карта Спавна</button>
@@ -17,20 +16,18 @@
         <button class="mainButton" id="wikiButton">Википедия</button>
     </div>
 
-    <!-- Карта под хедером -->
     <div class="spawnMap">
         <!-- Blocks -->
     </div>
 
-    <!-- Футер поверх всего -->
     <div class="footer-info">
         <div class="copyright">Powered By: Excedere The Decadenza</div>
     </div>
 
-    <script src="js/mainButtons.js"></script>
-    <script src="js/blocksData.js"></script>
-    <script src="js/createBlocks.js"></script>
-    <script src="js/tooltipManager.js"></script>
-    <script src="js/mapNavigation.js"></script>
+    <script src="js/spawnMap/mainButtons.js"></script>
+    <script src="js/spawnMap/data/sectorData.js"></script>
+    <script src="js/spawnMap/interactiveMap/createSector.js"></script>
+    <script src="js/spawnMap/interactiveMap/tooltipManager.js"></script>
+    <script src="js/spawnMap/interactiveMap/mapNavigation.js"></script>
 </body>
 </html>

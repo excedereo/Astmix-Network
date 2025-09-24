@@ -45,7 +45,7 @@ function setupTooltip(element) {
         <br>
         <div class="mapTooltipDescription"> ${descriptionBlock || 'Без описания'}</div>
         <br>
-        <div style="font-size: 10px; color: #888888;">Координаты: ${x1}, ${y1} - ${x2}, ${y2}</div>
+        <div style="font-size: 10px; color: #888888;">Координаты: ${x1}, ${y1} — ${x2}, ${y2}</div>
     `;
     // Вариант 2) Арендованный сектор
     } else if (isRented == "true") {
@@ -57,7 +57,7 @@ function setupTooltip(element) {
         <br>
         <div class="mapTooltipDescription"> ${descriptionBlock || 'Без описания'}</div>
         <br>
-        <div style="font-size: 10px; color: #888888;">Координаты: ${x1}, ${y1} - ${x2}, ${y2}</div>
+        <div style="font-size: 10px; color: #888888;">Координаты: ${x1}, ${y1} — ${x2}, ${y2}</div>
     `;
     // Вариант 3) Дорога
     } else if (isRented == null) {
@@ -71,7 +71,7 @@ function setupTooltip(element) {
             <div style="color: #689d61;">Свободен </div>
             <div style="font-size: 16px;">Стоимость: ${price} <img src="img/diamondOre.png" style="height: 20px; vertical-align: middle;"> / неделя</div>
             <br>
-            <div style="font-size: 10px; color: #888888;">Координаты: ${x1}, ${y1} - ${x2}, ${y2}</div>
+            <div style="font-size: 10px; color: #888888;">Координаты: ${x1}, ${y1} — ${x2}, ${y2}</div>
             `;
     }
 
