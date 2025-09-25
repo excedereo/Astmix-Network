@@ -30,9 +30,7 @@ body {
     background-image: linear-gradient(to bottom right, #26272b, #27282c);
     border: #1b1c1f 2px solid;
     transform-origin: center;
-}
-.territory:hover {
-    transform: scale(1.1);
+    overflow: hidden;
 }
 
 .territory-Empty {
@@ -70,6 +68,23 @@ body {
     background: #76a0f7;
     border: #4d7fe4 2px solid;
 }
+
+
+.territory:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(245, 0, 49,0.3);
+}
+.territory-Expired:hover {
+  box-shadow: 0 0 20px rgba(245, 0, 49,0.5);
+}
+.territory-Empty:hover {
+  box-shadow: 0 0 20px rgba(84, 145, 89,0.5);
+}
+.territory-public:hover {
+  box-shadow: 0 0 20px rgba(118, 160, 247,0.5);
+}
+
+
 
 .road-container {
     transition: 0.3s ease;
