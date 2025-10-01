@@ -162,7 +162,7 @@ function spawnDotInitializer() {
     centerTooltip.style.display = 'none';
     document.body.appendChild(centerTooltip);
 
-    centerDot.innerHTML = `<img src="img/Nether_Portal.webp" style="height: 30px; border-radius: 5px; cursor: pointer; transition: transform 0.3s ease;">`;
+    centerDot.innerHTML = `<img src="img/spawnMapMedia/Nether_Portal.webp" style="height: 30px; border-radius: 5px; cursor: pointer; transition: transform 0.3s ease;">`;
 
     const portalImg = centerDot.querySelector('img');
 

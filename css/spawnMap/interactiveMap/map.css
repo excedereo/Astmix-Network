@@ -24,7 +24,7 @@ body {
 }
 
 .territory {
-    transition: 0.3s ease;
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
     position: absolute;
     border-radius: 8px;
     background-image: linear-gradient(to bottom right, #26272b, #27282c);
@@ -39,7 +39,6 @@ body {
 }
 
 .territory-Deadline {
-    transition: 0.3s ease;
     animation: territoryDeadline 3s infinite;
     background: #26272b;
 }
@@ -51,7 +50,6 @@ body {
 }
 
 .territory-Expired {
-    transition: 0.3s ease;
     animation: territoryExpired 2s infinite;
     background: #aa0021;
     border: #9a0523 2px solid;

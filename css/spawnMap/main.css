@@ -1,3 +1,6 @@
+@import url('buttons.css');
+@import url('interactiveMap/map.css');
+
 @font-face {
     font-family: 'Gotham Pro';
     src: url('../../fonts/gothampro/GothamPro-Medium.eot');
@@ -54,31 +57,6 @@ html, body {
     margin-right: 40px;
 }
 
-.mainButton {
-    font-family: "Gotham Pro", sans-serif;
-    font-weight: 500;
-    color: #888888;
-    margin: auto;
-    margin-left: 30px;
-    margin-right: 0;
-    height: 30px;
-    width: 120px;
-    background: #333333;
-    border-radius: 5px;
-    border: #333333 2px solid;
-    transition-duration: 0.4s;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.mainButton:hover {
-    transform: scale(1.1);
-    transform-origin: center;
-    border: #e2852e 2px solid;
-    color: #fdd865;
-    box-shadow: 0px 0px 22px rgba(234, 158, 62, 0.2);
-}
-
 .footer-info {
     position: fixed;
     bottom: 0;
@@ -86,7 +64,7 @@ html, body {
     width: 100%;
     background: #0c0c0c;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -96,5 +74,5 @@ html, body {
 
 .copyright {
     color: #888;
-    font-size: 14px;
+    font-size: 8px;
 }

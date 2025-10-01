@@ -1,0 +1,182 @@
+.mainButton {
+    font-family: "Gotham Pro", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #888888;
+    margin: auto;
+    margin-left: 30px;
+    margin-right: 0;
+    height: 36px;
+    width: 120px;
+    background: #333333;
+    border-radius: 5px;
+    border: #292929 2px solid;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    padding: 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainButton:hover {
+    transform: scale(1.1);
+    transform-origin: center;
+    border: #e2852e 2px solid;
+    color: #fdd865;
+    box-shadow: 0px 0px 22px rgba(234, 158, 62, 0.2);
+}
+
+body { background: red !important; }
+
+/* ESPADA BUTTON */
+.mainButton-Espada {
+    background: #030303;
+    border: #030303 2px solid;
+    position: relative;
+    overflow: visible;
+}
+.mainButton-Espada:hover {
+    color: #ffffff;
+    border: #ffffff 2px solid;
+    box-shadow: 0px 0px 22px rgba(255, 255, 255, 0.2);
+}
+
+.mainButton-Espada::before,
+.mainButton-Espada::after,
+.mainButton-Espada .particleEspada-top,
+.mainButton-Espada .particleEspada-bottom {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    background-image: url('../../img/espadaParticle.png');
+    background-size: contain;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 10;
+}
+/* слева снизу */
+.mainButton-Espada:hover::before {
+    transform: translate(-170%, -10%) scale(1) rotate(-25deg);
+    opacity: 1;
+}
+/* справа */
+.mainButton-Espada:hover::after {
+    transform: translate(150%, -80%) scale(1) rotate(-5deg);
+    opacity: 1;
+}
+/* сверху слева */
+.mainButton-Espada:hover .particleEspada-top {
+    transform: translate(-230%, -100%) scale(1) rotate(45deg);
+    opacity: 1;
+}
+/* снизу справа */
+.mainButton-Espada:hover .particleEspada-bottom {
+    transform: translate(90%, 10%) scale(1) rotate(15deg);
+    opacity: 1;
+}
+
+
+/* Блик */
+.button-shineContainer {
+    position: absolute;
+    overflow: hidden;
+    width:100%;
+    height: 100%;
+}
+
+.buttonShine {
+    position: absolute;
+    left: -70%;
+    width: 50%;
+    height: 100%;
+    transform: skewX(-25deg);
+    transition: left 0s;
+}
+
+.buttonShine-Espada {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #ffffff4d,
+        transparent
+    );
+}
+
+.mainButton-Espada:hover .buttonShine-Espada {
+    left: 150%;
+    transition: left 0.7s ease;
+}
+
+
+
+/* BANK BUTTON */
+.mainButton-Bank {
+    background: #161616;
+    border: #101010 2px solid;
+    position: relative;
+    overflow: visible;
+}
+.mainButton-Bank:hover {
+    color: #46d2cc;
+    border: #46d2cc 2px solid;
+    box-shadow: 0px 0px 22px rgba(118, 160, 247, 0.2);
+}
+
+.mainButton-Bank::before,
+.mainButton-Bank::after,
+.mainButton-Bank .diamond-top,
+.mainButton-Bank .diamond-bottom {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url('../../img/diamondOre.png');
+    background-size: contain;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0) rotate(0deg);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 10;
+}
+/* слева снизу */
+.mainButton-Bank:hover::before {
+    transform: translate(-200%, -10%) scale(1) rotate(0deg);
+    opacity: 1;
+}
+/* справа */
+.mainButton-Bank:hover::after {
+    transform: translate(180%, -80%) scale(1) rotate(5deg);
+    opacity: 1;
+}
+/* сверху слева */
+.mainButton-Bank:hover .diamond-top {
+    transform: translate(-270%, -110%) scale(1) rotate(45deg);
+    opacity: 1;
+}
+/* снизу справа */
+.mainButton-Bank:hover .diamond-bottom {
+    transform: translate(110%, 10%) scale(1) rotate(15deg);
+    opacity: 1;
+}
+
+/* Блик */
+.buttonShine-Bank {
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #43c5c04d,
+        transparent
+    );
+}
+
+.mainButton-Bank:hover .buttonShine-Bank {
+    left: 150%;
+    transition: left 0.7s ease;
+}
