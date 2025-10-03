@@ -1,9 +1,8 @@
 .spawnMap {
-    background: #111111;
+    background: #101010;
     width: 6000px;
     height: 6000px;
     position: absolute;
-    overflow: visible;
     cursor: grab;
     top: 0;
     left: 0;
@@ -30,7 +29,6 @@ body {
     background-image: linear-gradient(to bottom right, #26272b, #27282c);
     border: #1b1c1f 2px solid;
     transform-origin: center;
-    overflow: hidden;
 }
 
 .territory-Empty {
@@ -85,10 +83,9 @@ body {
 
 
 .road-container {
-    transition: 0.3s ease;
+    transition: 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .road {
-    transition: 0.3s ease;
     z-index: 2;
     position: absolute;
     background-image: linear-gradient(to bottom right, #1e1f22, #1e1f22);
@@ -100,7 +97,6 @@ body {
     color: white;
 }
 .roadBackground {
-    transition: 0.3s ease;
     z-index: 1;
     position: absolute;
     background: #26282e;

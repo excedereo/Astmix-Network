@@ -1,41 +1,40 @@
 .mainButton {
     font-family: "Gotham Pro", sans-serif;
     font-weight: 500;
-    font-size: 14px;
+    font-size: clamp(5px, 1vw, 14px);
     color: #888888;
     margin: auto;
-    margin-left: 30px;
+    margin-left: clamp(2px, 2vw, 25px);
     margin-right: 0;
     height: 36px;
-    width: 120px;
+    width: 6%;
     background: #333333;
-    border-radius: 5px;
+    border-radius: 7px;
     border: #292929 2px solid;
     transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    padding: 0px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+.mainButton-Picked {
+    border: #e9983b 1px solid;
+    box-shadow: 0px 0px 12px rgba(233, 152, 59, 0.3);
+}
 .mainButton:hover {
     transform: scale(1.1);
-    transform-origin: center;
     border: #e2852e 2px solid;
     color: #fdd865;
     box-shadow: 0px 0px 22px rgba(234, 158, 62, 0.2);
 }
-
-body { background: red !important; }
 
 /* ESPADA BUTTON */
 .mainButton-Espada {
     background: #030303;
     border: #030303 2px solid;
     position: relative;
-    overflow: visible;
 }
 .mainButton-Espada:hover {
     color: #ffffff;
@@ -51,7 +50,7 @@ body { background: red !important; }
     position: absolute;
     width: 33px;
     height: 33px;
-    background-image: url('../../img/espadaParticle.png');
+    background-image: url('../img/espadaParticle.png');
     background-size: contain;
     left: 50%;
     top: 50%;
@@ -114,13 +113,10 @@ body { background: red !important; }
 }
 
 
-
-/* BANK BUTTON */
 .mainButton-Bank {
     background: #161616;
     border: #101010 2px solid;
     position: relative;
-    overflow: visible;
 }
 .mainButton-Bank:hover {
     color: #46d2cc;
@@ -136,7 +132,7 @@ body { background: red !important; }
     position: absolute;
     width: 25px;
     height: 25px;
-    background-image: url('../../img/diamondOre.png');
+    background-image: url('../img/diamondOre.png');
     background-size: contain;
     left: 50%;
     top: 50%;
@@ -179,4 +175,14 @@ body { background: red !important; }
 .mainButton-Bank:hover .buttonShine-Bank {
     left: 150%;
     transition: left 0.7s ease;
+}
+
+.buttonsSeparator {
+    flex-grow: 1;
+    height: 1px;
+    min-width: 20px;
+}
+.buttonsEnder {
+    height: 1px;
+    min-width: 20px;
 }

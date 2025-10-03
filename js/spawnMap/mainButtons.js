@@ -1,19 +1,16 @@
 // mainButtons.js
-// Карта Спавна
-const spawnMapButton = document.getElementById('spawnMap');
-spawnMapButton.addEventListener('click', function() {
-    window.location.href = 'spawnMap.html';
-    console.log("переход на spawnMap.html")
-});
+document.addEventListener('DOMContentLoaded', function() {
 
-// Онлайн Карта
-const onlineMapButton = document.getElementById('onlineMap');
-onlineMapButton.addEventListener('click', function() {
-    window.open('http://astmix.net:25863/', '_blank');
-});
+    document.body.addEventListener('click', function(event) {
 
-// Википедия
-const wikiButton = document.getElementById('wikiButton');
-wikiButton.addEventListener('click', function() {
-    window.open('https://astmix-network.gitbook.io/astmix-network', '_blank');
+        if (event.target.id === 'spawnMap') {
+            console.log('Переход на spawnMap.html');
+            window.location.href = 'spawnMap.html';
+        }
+
+        if (event.target.id === 'openMain') {
+            console.log('Переход на main.html');
+            window.location.href = 'main.html';
+        }
+    });
 });
