@@ -1,0 +1,24 @@
+
+
+.navigationItem {
+    width: 24%;
+    margin-right: 5px;
+}
+.glassButton {
+    height: 27%;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 16px;
+
+}
+.glassButton:hover{
+    transform: translateY(20px);
+    font-size: 18px;
+    color: #e69336;
+}
+
+.navigationCase {
+    height: 70vh;
+    align-items: flex-end;
+
+}

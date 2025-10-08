@@ -1,0 +1,119 @@
+@import url('tooltips.css');
+
+/* Main class */
+.territory {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: absolute;
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, #2a2b2f 0%, #232428 100%);
+    border: #34363b 2px solid;
+    transform-origin: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 4px;
+}
+.territory:hover {
+    transform: scale(1.12);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.15);
+    z-index: 100;
+}
+
+
+
+/* Empty styles    */
+.territory-Empty {
+    background-image: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    border: #3d8b40 2px solid;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+}
+.territory-Empty:hover {
+    transform: scale(1.15);
+    box-shadow: 0 5px 5px rgba(76, 175, 80, 0.3);
+}
+
+
+
+/* Public styles 🔵 */
+.territory-public {
+    transition: all 0.4s ease;
+    background: linear-gradient(135deg, #2196F3 0%, #1976D2 100%);
+    border: #0D47A1 2px solid;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+.territory-public:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 30px rgba(33, 150, 243, 0.5);
+}
+
+
+
+/* Deadline styles 🔶 */
+.territory-Deadline {
+    animation: territoryDeadline 2.5s ease-in-out infinite;
+    background-image: linear-gradient(135deg, #2a2b2f 0%, #232428 100%);
+    border: #34363b 2px solid;
+    box-shadow: 0 4px 20px rgba(255, 152, 0, 0.3);
+}
+.territory-Deadline:hover {
+
+}
+@keyframes territoryDeadline {
+    0% {
+        border: #34363b 2px solid;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    50% {
+        border: rgba(51, 18, 18, 0.7) 2px solid;
+        box-shadow: 0 0 6px rgba(255, 0, 0, 0.3);
+    }
+    100% {
+        border: #34363b 2px solid;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
+
+
+
+/* Expired styles 🔴 */
+.territory-Expired {
+    animation: territoryExpired 2.5s infinite;
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+    border: #b71c1c 2px solid;
+    box-shadow: 0 4px 20px rgba(244, 67, 54, 0.4);
+}
+.territory-Expired:hover {
+    transform: scale(1.1);
+}
+@keyframes territoryExpired {
+    0% {
+        background: #711313;
+        box-shadow: 0 6px 25px rgba(244, 67, 54, 0.3);
+    }
+    50% {
+        background: #b71c1c;
+        box-shadow: 0 4px 20px rgb(183, 28, 28, 0.5);
+    }
+    100% {
+        background: #711313;
+        box-shadow: 0 6px 25px rgba(244, 67, 54, 0.3);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

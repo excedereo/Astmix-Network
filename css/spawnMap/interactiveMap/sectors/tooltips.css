@@ -1,0 +1,47 @@
+
+.mapTooltip {
+    display: none;
+    position: fixed;
+    background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(30, 30, 30, 0.95) 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    pointer-events: none;
+    min-width: 300px;
+    max-width: 500px;
+    z-index: 3000;
+    border: 1px solid #444;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.mapTooltipDescription {
+    font-family: 'Gotham Pro Regular', Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 8px 12px;
+    background: linear-gradient(135deg, rgba(40, 40, 45, 0.95) 0%, rgba(35, 35, 40, 0.95) 100%);
+    color: #e0e0e0;
+    border-radius: 8px;
+    pointer-events: none;
+    min-width: 120px;
+    max-width: 450px;
+    z-index: 3001;
+    border: 1px solid #555;
+    line-height: 1.4;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(7px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mapTooltip,
+.mapTooltipDescription {
+    animation: fadeInUp 0.3s ease-out;
+}

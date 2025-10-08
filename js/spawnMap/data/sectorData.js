@@ -22,7 +22,7 @@ window.blocksData = [
         x2: 132, y2: 28,
         price: 15,
         name: "Espada", description: "",
-        rentedBy: "zquwu", arendTill: "27.09.2025", arendatorName: "Stralitz"
+        rentedBy: "zquwu", arendTill: "10.10.2025", arendatorName: "Stralitz"
     },
         {
         id: "A4",
